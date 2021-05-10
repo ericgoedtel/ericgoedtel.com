@@ -25,3 +25,13 @@ resource "aws_route53_record" "www" {
     "ericgoedtel.github.io"
   ]
 }
+
+resource "aws_route53_record" "banana" {
+  zone_id = aws_route53_zone.personal_domain.zone_id
+  name    = "banana.ericgoedtel.com"
+  type    = "CNAME"
+  ttl     = 3600
+  records = [
+    "ericgoedtel.github.io"
+  ]
+}
