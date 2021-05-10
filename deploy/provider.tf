@@ -8,4 +8,10 @@ terraform {
       version = "~> 3.39.0"
     }
   }
+  backend "remote" {
+    organization = "ericgoedtel"
+    workspaces {
+      name = "ericgoedtelcom"
+    }
+  }
 }
